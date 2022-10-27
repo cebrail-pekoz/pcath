@@ -1,10 +1,16 @@
+// ***** Modüller
 const express = require('express');
+const path = require('path');
+// ***** //Modüller
 
-const app = express();
+const app = express(); // express uygulaması
+app.use(express.static('public')); // statik dosyalar -middleware
 
+// ***** Yönlendirmeler
 app.get('/', (req, res) => {
-    res.send('Merhaba');
+    res.sendFile(path.resolve(__dirname, 'temp/index.html'));
 });
+// ***** //Yönlendirmeler
 
 // ***** Server Çalıştırma
 const port = 3000;
