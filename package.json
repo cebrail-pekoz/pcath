@@ -1,0 +1,25 @@
+{
+  "name": "pcath",
+  "version": "1.0.0",
+  "description": "Pcath photo app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cebrail-pekoz/pcath.git"
+  },
+  "keywords": [
+    "photo"
+  ],
+  "author": "Cebrail Peköz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cebrail-pekoz/pcath/issues"
+  },
+  "homepage": "https://github.com/cebrail-pekoz/pcath#readme",
+  "devDependencies": {
+    "prettier": "2.7.1"
+  }
+}
