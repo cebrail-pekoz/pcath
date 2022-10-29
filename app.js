@@ -36,7 +36,6 @@ app.set('view engine', 'ejs'); // kullanılacak template engine uygulamaya dahil
 // ***** //Template Engine
 
 // ***** Yönlendirmeler
-
 app.get('/', photoController.getAllPhotos); // anasayfa
 app.get('/photos/:id', photoController.getPhoto); // tekil fotoğraf sayfası
 app.post('/photos', photoController.createPhoto); // yeni fotoğraf oluşturma sayfası
@@ -46,7 +45,6 @@ app.delete('/photos/:id', photoController.deletePhoto); // silme işlemi
 app.get('/about', pageController.getAboutPage); // about sayfası
 app.get('/add', pageController.getAddPhotoPage); // addphoto sayfası
 app.get('/photos/edit/:id', pageController.getEditPage); // güncelleme sayfası
-
 // ***** //Yönlendirmeler
 
 // ***** Server Çalıştırma
