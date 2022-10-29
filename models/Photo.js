@@ -1,7 +1,9 @@
+// ***** MODÜLLER
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// ***** //MODÜLLER
 
-// ***** schema oluşturma
+// ***** Schema Oluşturma
 const PhotoSchema = new Schema({
     title: String,
     description: String,
@@ -11,9 +13,9 @@ const PhotoSchema = new Schema({
         default: Date.now,
     },
 });
+// ***** //Schema Oluşturma
 
-// ***** veritabanı bu ismi küçük harflere çevirip collection oluşturur >> 'photos' şeklinde
-// veritabanına şemayı 'Photo' isminde gönderme
-const Photo = mongoose.model('Photo', PhotoSchema);
+const Photo = mongoose.model('Photo', PhotoSchema); // veritabanına şemayı 'Photo' isminde gönderme
+// veritabanı bu ismi küçük harflere çevirip collection oluşturur >> 'photos' şeklinde
 
-module.exports = Photo;
+module.exports = Photo; // dışa aktarma

@@ -16,10 +16,8 @@
                     </div>
 
                     <div id="tm-video-container">
-                        <video autoplay muted loop id="tm-video">
-                            <!-- <source src="video/sunset-timelapse-video.mp4" type="video/mp4"> -->
-                            <source src="video/wheat-field.mp4" type="video/mp4">
-                        </video>
+
+                        <img src="img/contact-1.jpg" alt="">
                     </div>
 
                     <i id="tm-video-control-button" class="fas fa-plus"></i>
@@ -54,7 +52,38 @@
                         </div>
 
                         <!-- Catalog Paging Buttons -->
+
+                        <!-- DİNAMİK SAYFALAMA - PAGINATION -->
                         <div>
+                            <% if (pages> 1) { %>
+                                <ul class="nav tm-paging-links">
+                                    <% for (i=1; i <=pages; i++) { %>
+                                        <% if (i==current) { %>
+                                            <li class="nav-item active">
+                                                <a href="/?page=<%= i %>" class="nav-link tm-paging-link">
+                                                    <%= i %>
+                                                </a>
+                                            </li>
+                                            <% } else if (i < pages) { %>
+                                                <li class="nav-item">
+                                                    <a href="/?page=<%= i %>" class="nav-link tm-paging-link">
+                                                        <%= i %>
+                                                    </a>
+                                                </li>
+                                                <% } else { %>
+                                                    <li class="nav-item">
+                                                        <a href="/?page=<%= i %>" class="nav-link tm-paging-link">></a>
+                                                    </li>
+                                                    <% } %>
+                                                        <% } %>
+                                </ul>
+                                <% } %>
+                        </div>
+                        <!-- //DİNAMİK SAYFALAMA - PAGINATION -->
+
+
+                        <!-- STATİK SAYFALAMA - PAGINATION -->
+                        <!-- <div>
                             <ul class="nav tm-paging-links">
                                 <li class="nav-item active"><a href="#" class="nav-link tm-paging-link">1</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link tm-paging-link">2</a></li>
@@ -62,7 +91,9 @@
                                 <li class="nav-item"><a href="#" class="nav-link tm-paging-link">4</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link tm-paging-link">></a></li>
                             </ul>
-                        </div>
+                        </div> -->
+                        <!-- //STATİK SAYFALAMA - PAGINATION -->
+
                     </main>
 
                     <%- include ('partials/_footer.ejs') %>
